@@ -17,12 +17,14 @@
             <span>Lenguaje Favorito: </span>
             <span>@Model.Lenguaje</span>
         </div>
-        @if(Model.Comentario != null){
-            <div class="item result">
-                <span>Comentario: </span>
-                <span>@Model.Comentario</span>
-            </div>
-        }        
+        <div class="item result">
+            <span>Comentario: </span>
+            @if(@Model.Comentario == null){
+                <span>Sin Comentarios</span>
+            }else{
+               <span>@Model.Comentario</span> 
+            }            
+        </div>      
         <form method="GET" asp-controller="Home" asp-action="Index">
             <div class="item boton">    
                 <button>Volver</button>                  
