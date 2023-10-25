@@ -13,6 +13,6 @@ public class Survey{
     [Required(ErrorMessage = "Por favor proporciona este dato!")]
     public string Lenguaje {get;set;}
 
-    [Required(AllowEmptyStrings = true)]
-    public string Comentario {get;set;}
+    [MinLength(20, ErrorMessage="Tu comentario debe de tener al menos 20 caracteres.")]
+    public string? Comentario {get;set;}
 }
